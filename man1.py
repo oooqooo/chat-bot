@@ -1,7 +1,7 @@
 # check for available models
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyDybx5llpvKMKD6XDRZxVWj8zNAlpdeRFk")
+genai.configure(api_key="")
 
 for m in genai.list_models():
     if 'generateContent' in m.supported_generation_methods:
@@ -10,7 +10,7 @@ for m in genai.list_models():
 # ai access code 
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyDybx5llpvKMKD6XDRZxVWj8zNAlpdeRFk")
+genai.configure(api_key="'")
 model = genai.GenerativeModel('gemini-2.5-flash')
 chat = model.start_chat(history=[])
 
@@ -25,7 +25,7 @@ while True:
 import google.generativeai as genai
 with open('nam`.txt') as f:  
      s = f.read()
-genai.configure(api_key="AIzaSyDybx5llpvKMKD6XDRZxVWj8zNAlpdeRFk")
+genai.configure(api_key="")
 model = genai.GenerativeModel('gemini-2.5-flash',system_instruction=f"You should respose using this {s}")
 chat = model.start_chat(history=[])
 
